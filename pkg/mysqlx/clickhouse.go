@@ -88,7 +88,7 @@ func toClickhouseType(typ string) string {
 		return withUnsigned("Int8", after)
 	case "smallint", "year":
 		return withUnsigned("Int16", after)
-	case "bit", "mediumint", "int", "integer":
+	case "mediumint", "int", "integer":
 		return withUnsigned("Int32", after)
 	case "bigint":
 		return withUnsigned("Int64", after)
