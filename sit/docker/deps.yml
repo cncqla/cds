@@ -215,7 +215,6 @@ services:
     image: liliankasem/kafka-connect:1.1.0
     container_name: kafka-connector
     hostname: connect
-    container_name: connect
     restart: always
     ports:
       - "8083:8083"
