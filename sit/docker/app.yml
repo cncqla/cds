@@ -33,7 +33,7 @@ services:
     container_name: nginx
     restart: always
     ports:
-      - 3414:80
+      - "3414:80"
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./nginx/:/var/log/nginx
