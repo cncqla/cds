@@ -22,3 +22,4 @@ third_party/etcd
 docker_build.log
 docker_build.info
 make_build.info
+web/node_modules

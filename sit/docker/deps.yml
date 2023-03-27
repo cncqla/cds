@@ -124,46 +124,46 @@ services:
         condition: service_healthy
       zookeeper:
         condition: service_healthy
-  ch-server-3:
-    image: yandex/clickhouse-server
-    container_name: ch-server-3
-    volumes:
-      - ./clickhouse/config.xml:/etc/clickhouse-server/config.d/local.xml
-      - ./clickhouse/macros3.xml:/etc/clickhouse-server/config.d/macros.xml
-    ports:
-      - 8125:8123
-      - 9002:9000
-    environment:
-      TZ: "Asia/Shanghai"
-    depends_on:
-      mysql:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
-      etcd:
-        condition: service_healthy
-      zookeeper:
-        condition: service_healthy
-  ch-server-4:
-    image: yandex/clickhouse-server
-    container_name: ch-server-4
-    volumes:
-      - ./clickhouse/config.xml:/etc/clickhouse-server/config.d/local.xml
-      - ./clickhouse/macros4.xml:/etc/clickhouse-server/config.d/macros.xml
-    ports:
-      - 8126:8123
-      - 9003:9000
-    environment:
-      TZ: "Asia/Shanghai"
-    depends_on:
-      mysql:
-        condition: service_healthy
-      redis:
-        condition: service_healthy
-      etcd:
-        condition: service_healthy
-      zookeeper:
-        condition: service_healthy
+#  ch-server-3:
+#    image: yandex/clickhouse-server
+#    container_name: ch-server-3
+#    volumes:
+#      - ./clickhouse/config.xml:/etc/clickhouse-server/config.d/local.xml
+#      - ./clickhouse/macros3.xml:/etc/clickhouse-server/config.d/macros.xml
+#    ports:
+#      - 8125:8123
+#      - 9002:9000
+#    environment:
+#      TZ: "Asia/Shanghai"
+#    depends_on:
+#      mysql:
+#        condition: service_healthy
+#      redis:
+#        condition: service_healthy
+#      etcd:
+#        condition: service_healthy
+#      zookeeper:
+#        condition: service_healthy
+#  ch-server-4:
+#    image: yandex/clickhouse-server
+#    container_name: ch-server-4
+#    volumes:
+#      - ./clickhouse/config.xml:/etc/clickhouse-server/config.d/local.xml
+#      - ./clickhouse/macros4.xml:/etc/clickhouse-server/config.d/macros.xml
+#    ports:
+#      - 8126:8123
+#      - 9003:9000
+#    environment:
+#      TZ: "Asia/Shanghai"
+#    depends_on:
+#      mysql:
+#        condition: service_healthy
+#      redis:
+#        condition: service_healthy
+#      etcd:
+#        condition: service_healthy
+#      zookeeper:
+#        condition: service_healthy
   mongo1:
     image: mongo:4.4
     container_name: mongo1
