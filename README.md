@@ -5,6 +5,8 @@
 # ClickHouse Data Synchromesh
 Data syncing in golang for ClickHouse.
 
+Start from https://github.com/zeromicro/cds
+
 
 based on [go-zero](https://github.com/zeromicro/go-zero) 
 
